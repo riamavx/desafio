@@ -5,7 +5,7 @@ Console.WriteLine("Desafio Iniciado");
 Client c = new Client();
 
 Console.WriteLine("Digite seu nome: ");
-c.name = Console.ReadLine();
+c.Name = Console.ReadLine();
 
 Console.WriteLine("Digite seu e-mail: ");
 c.Email = Console.ReadLine();

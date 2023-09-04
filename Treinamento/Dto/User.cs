@@ -2,7 +2,7 @@
 {
     public class User : BaseRegister
     {
-        public Guid id = Guid.NewGuid();
+        public Guid Id = Guid.NewGuid();
 
     }
 }

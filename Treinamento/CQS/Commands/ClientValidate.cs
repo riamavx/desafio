@@ -8,7 +8,7 @@ namespace Treinamento.CQS.Commands.ClientValidate
     {
         public ClientValidate()
         {
-            RuleFor(Client => Client.name)
+            RuleFor(Client => Client.Name)
                 .NotNull()
                     .WithMessage("Name is required.");
 
@@ -16,11 +16,11 @@ namespace Treinamento.CQS.Commands.ClientValidate
                 .EmailAddress()
                     .WithMessage("e-mail is invalid.");
 
-            RuleFor(Client => Client.cpf)
+            RuleFor(Client => Client.Cpf)
                 .GreaterThanOrEqualTo(11)
                     .WithMessage("CPF then or equal to 11 numbers");
 
-            RuleFor(Client => Client.password)
+            RuleFor(Client => Client.Password)
                 .GreaterThanOrEqualTo(6)
                     .WithMessage("Password must contain at least 6 characters");
         }

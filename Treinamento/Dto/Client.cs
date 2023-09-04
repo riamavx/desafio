@@ -2,16 +2,16 @@
 {
     public class Client : BaseRegister
     {
-        public Guid id = Guid.NewGuid();
-        public string name { get; set; }
-        public int cpf { get; set; }
-        public DateTime dataNascimento { get; set; }
+        public Guid Id = Guid.NewGuid();
+        public string Name { get; set; }
+        public int Cpf { get; set; }
+        public DateTime DataNascimento { get; set; }
 
-        //public int age = CalculaIdade(dataNascimento);
+        public int age => CalculaIdade();
 
-        private static int CalculaIdade(DateTime dataNascimento)
+        private int CalculaIdade()
         {
-            int idade = DateTime.Now.Year - dataNascimento.Year;
+            int idade = DateTime.Now.Year - DataNascimento.Year;
 
             return (idade == 0) ? 0 : idade;
         }
